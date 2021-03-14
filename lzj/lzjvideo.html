@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Just For Sharing</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload-0 is-preload-1 is-preload-2">
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Header -->
+				<header id="header">
+					<h1>이준기</h1>
+					<a href="../index.html">Just For Sharing</a><br />
+					<a href="works-lzj.html">Works</a> <br />
+					<a href="lzjpics.html">Pictures</a> <br />
+					<a href="lzjvideo.html">Videos</a>
+				</header>
+
+				<!-- Thumbnail -->
+				<section id="thumbnails">
+					<article>
+						<video id="videoView" src="videos/恶之花01.MP4" autoplay="autoplay" controls="controls" width="900" height="600"></video>
+						<h2 id="sp1">Diam tempus accumsan</h2>
+						<p id="tt1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<img src="images/lzj/logo.jpg" width="20" height="20" @onclick="change()" />
+					</article>
+				</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>更新ing</li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/main.js"></script>
+		   <script>
+			   videos: ["videos/恶之花01.MP4", "videos/溺水小刀01.MP4"]
+			   next:0;
+			   len: 2;
+			   function change() {
+				   var video = document.getElementById("videoView")
+				   next = (next + 1) % len;
+				   video.src = videos[next];
+			   }
+			   
+
+
+		   </script>
+
+	</body>
+</html>
